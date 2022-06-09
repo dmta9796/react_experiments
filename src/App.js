@@ -2,9 +2,24 @@ import './App.css';
 import React, {useState} from 'react';
 import axios from 'axios';
 import ImageLoader from "./components/ImageLoader";
+import ListComponent from "./components/ListComponent";
+
+const listdata = ["1","2","3"];
+
+const listobject = listdata.map((item,idx) => ({
+  id: idx,
+  val: item
+}));
 
 function App() {
-  return <ImageLoader/>
+  const [state,setState] = useState("default")
+  return (
+  <div>
+    <h1>current state: {state}</h1>
+    <button onClick = {()=> setState("special")}>special</button>
+    {/* <ImageLoader data = "nonsense"/>
+    <ListComponent listdata = {listobject}/> */}
+  </div>)
 }
 
 export default App;
