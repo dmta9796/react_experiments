@@ -11,7 +11,10 @@ function ArcWrapper() {
         try {
           const response = await fetch(url);
           const json = await response.json();
-          console.log(json);
+          console.log(json.properties.relativeHumidity.values[0].value);
+          var value = json.properties.relativeHumidity.values[0].value
+          setProgressValue(null,value)
+
         } catch (error) {
           console.log("error", error);
         }
