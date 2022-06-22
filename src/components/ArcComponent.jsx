@@ -15,7 +15,7 @@ function ArcComponent(props) {
       arcGenerator({
         endAngle: 2 * Math.PI * value
       });
-  
+
     return (
       <div>
         <svg height={svgHeight} width={svgWidth}>
@@ -25,7 +25,7 @@ function ArcComponent(props) {
           <g transform={`translate(${svgWidth / 2}, ${svgHeight / 2})`}>
             <path
               d={progressArc(progressPercentage / 100)}
-              fill={"red"}
+              fill={colorIndicator}
             />
             <text x="-10" y="5">
               {`${progressPercentage}%`}
