@@ -22,11 +22,9 @@ function ArcWrapper() {
           .ease(d3.easeSinInOut)
           .tween("progressPercentage", () =>{
             const percentInterpolate = d3.interpolate(100,value);
-            return t => setProgressPercentage(percentInterpolate(t))
+            return t => setProgressPercentage(Math.round(percentInterpolate(t)))
 
           });
-
-          //setProgressPercentage(value)
 
         } catch (error) {
           console.log("error", error);
