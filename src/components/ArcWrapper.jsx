@@ -47,14 +47,17 @@ function ArcWrapper() {
     // }
   
     return (
-      <Box padding="3rem" justifyContent="center">
-        <ArcComponent
-          svgWidth={svgWidth}
-          arcWidth={arcWidth}
-          progressPercentage={progressPercentage}
-          colorIndicator={colorIndicator}
-        />
-      </Box>
+      <div>
+        <p>Humitity Measure</p>
+        <Box padding="3rem" justifyContent="center">
+          <ArcComponent
+            svgWidth={svgWidth}
+            arcWidth={arcWidth}
+            progressPercentage={progressPercentage}
+            colorIndicator={colorIndicator}
+          />
+        </Box>
+      </div>
     );
   }
 

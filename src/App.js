@@ -5,6 +5,7 @@ import ImageLoader from "./components/ImageLoader";
 import ListComponent from "./components/ListComponent";
 import ScaleComponent from "./components/ScaleComponent";
 import ArcWrapper from "./components/ArcWrapper";
+import CardWrapper from "./components/CardWrapper";
 
 const listdata = ["1","2","3"];
 
@@ -22,6 +23,7 @@ function App() {
         <button onClick = {()=> setState("special")}>special</button>
       </div>
   <ArcWrapper/>
+  <CardWrapper/>
   </div>)
 }
 
